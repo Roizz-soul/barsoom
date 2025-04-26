@@ -1,8 +1,8 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  name: #id of input
-  description: 'Name'
+  name: name
+  description: 'name'
   required: true
   default: 'Basrsoom'
 outputs:
