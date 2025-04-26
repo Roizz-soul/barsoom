@@ -1,5 +1,10 @@
 import * as core from '@actions/core';
+import * as github from '@actions/github'
 
-const nameToGreet = core.getInput('name')
-const output_value = "Hello " + nameToGreet;
-core.setOutput('outputKey', output_value)
+try {
+    const nameToGreet = core.getInput('name');
+    const output_value = "Hello " + nameToGreet;
+    core.setOutput('outputKey', output_value);
+} catch(error) {
+    core.setFailed(error.message);
+}
